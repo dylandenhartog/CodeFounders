@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span{
+            color: green;
+        }
+
+        .class1{
+            background-color: green;
+        }
+
+        #mijn-table{
+            font-size: 32px;
+        }
+    </style>
+
+    <script>
+        console.log("Het werkt");
+
+        const a = 6   // Constant
+        let b = 'Test'
+        var c = true
+        let d = 12
+        // var c = false // overschrijft
+        // let b = 'Test2' // error
+
+        console.log(a);
+        console.log("B heeft de waarde " + b)
+        console.log("C heeft de waarde " + c)
+
+        let addition = 2 + 5 + 4;
+        let subtract = 5 - 8;
+        let multiply = a * 4;
+        let divide = a / 5;
+        
+        d++; // a = a + 1
+        d--; // a = a - 1
+
+        // Verkorte notatie
+        d += 2 // d = d + 2
+        d -= 4 // d = d - 4
+        
+        // Vergelijking (Comparator operators)
+        // boolean -> uitkomst   (true / false)
+        console.log(d == 2) // gelijk aan elkaar (equal)
+        console.log(d != 2) // ongelijk aan elkaar (not equal)
+        console.log(d > a)  // groter dan
+
+        // function declaration
+        function optellen(getal1, getal2) {
+            let optelWaarde = getal1 + getal2
+            console.log("optellen heeft de waarde " + optelWaarde)
+        }
+
+        // function call
+        optellen(2,5); 
+        // optellen(); optellen(); optellen(); optellen(); optellen(); 
+
+        function calculate() {
+            // Document getElementbyId toegang tot element te krijgen
+           let getal1Element = document.getElementById('getal1-invoer'); //getal1-ivoer is een argument
+           let getal2Element = document.getElementById('getal2-invoer');
+           // Element.value is dus de waarde die is ingevuld
+
+           let getal1 = parseInt(getal1Element.value)
+           let getal2 = parseInt(getal2Element.value)
+
+           console.log(getal1 + getal2);
+
+            
+            //console.log(getal1 + getal2)
+           console.log(getal1Element.tagName);
+           console.log(getal1Element.type)
+        }
+
+        function sub() {
+            // Document getElementbyId toegang tot element te krijgen
+           let getal1Element = document.getElementById('getal1-invoer'); //getal1-ivoer is een argument
+           let getal2Element = document.getElementById('getal2-invoer');
+           // Element.value is dus de waarde die is ingevuld
+
+           let getal1 = parseInt(getal1Element.value)
+           let getal2 = parseInt(getal2Element.value)
+
+           console.log(getal1 - getal2);
+
+            
+            //console.log(getal1 + getal2)
+           console.log(getal1Element.tagName);
+           console.log(getal1Element.type)
+        }
+
+        function Multiply() {
+            // Document getElementbyId toegang tot element te krijgen
+           let getal1Element = document.getElementById('getal1-invoer'); //getal1-ivoer is een argument
+           let getal2Element = document.getElementById('getal2-invoer');
+           // Element.value is dus de waarde die is ingevuld
+
+           let getal1 = parseInt(getal1Element.value)
+           let getal2 = parseInt(getal2Element.value)
+
+           console.log(getal1 * getal2);
+
+            
+            //console.log(getal1 + getal2)
+           console.log(getal1Element.tagName);
+           console.log(getal1Element.type)
+        }
+
+        function Divide() {
+            // Document getElementbyId toegang tot element te krijgen
+           let getal1Element = document.getElementById('getal1-invoer'); //getal1-ivoer is een argument
+           let getal2Element = document.getElementById('getal2-invoer');
+           // Element.value is dus de waarde die is ingevuld
+
+           let getal1 = parseInt(getal1Element.value)
+           let getal2 = parseInt(getal2Element.value)
+
+           console.log(getal1 / getal2);
+
+            
+            //console.log(getal1 + getal2)
+           console.log(getal1Element.tagName);
+           console.log(getal1Element.type)
+        }
+    </script>
+</head>
+<body>
+    <h1>Mijn pagina</h1>
+
+    <span style="color:rgb(177, 50, 50);">Tekst</span><span>Tekst2</span>
+    <p style="color:blue; text-decoration: underline;">Dit is een paragraaf</p>
+    <p class="class1">Dit is een paragraaf2</p>
+
+    <table id="mijn-table">
+        <tr>
+            <td>Martijn</td>
+        </tr>
+        <tr>
+            <td>Henk</td>
+            <td>Margreet</td>
+        </tr>
+    </table>
+
+    <img src="https://www.udacity.com/blog/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg">
+
+    <input type="number" id="getal1-invoer">
+    <input type="number" id="getal2-invoer">
+    <button type="button" onclick="calculate()">Optellen</button>
+    <button type="button" onclick="sub()">Aftrekken</button>
+    <button type="button" onclick="Multiply()">Vermenigvuldigen</button>
+    <button type="button" onclick="Divide()">Delen</button>
+
+</body>
+</html>
